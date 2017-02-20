@@ -16,7 +16,6 @@
 		B3FE75241E5AB34C009CBBDA /* iOS10NotificationDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B3FE75231E5AB34C009CBBDA /* iOS10NotificationDemoTests.m */; };
 		B3FE752F1E5AB34C009CBBDA /* iOS10NotificationDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B3FE752E1E5AB34C009CBBDA /* iOS10NotificationDemoUITests.m */; };
 		B3FE753E1E5AB3A0009CBBDA /* TowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3FE753D1E5AB3A0009CBBDA /* TowViewController.m */; };
-		B3FE75421E5B34D0009CBBDA /* video.mov in Resources */ = {isa = PBXBuildFile; fileRef = B3FE75401E5B34D0009CBBDA /* video.mov */; };
 		B3FE75451E5B34F6009CBBDA /* audio.Mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B3FE75441E5B34F6009CBBDA /* audio.Mp3 */; };
 		B3FE75471E5B3547009CBBDA /* wallpaper.png in Resources */ = {isa = PBXBuildFile; fileRef = B3FE75461E5B3547009CBBDA /* wallpaper.png */; };
 		B3FE754F1E5B3762009CBBDA /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3FE754E1E5B3762009CBBDA /* UserNotifications.framework */; };
@@ -24,6 +23,7 @@
 		B3FE75551E5B3762009CBBDA /* NotificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3FE75541E5B3762009CBBDA /* NotificationViewController.m */; };
 		B3FE75581E5B3762009CBBDA /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3FE75561E5B3762009CBBDA /* MainInterface.storyboard */; };
 		B3FE755C1E5B3762009CBBDA /* YTContent.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B3FE754C1E5B3762009CBBDA /* YTContent.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B3FE75621E5B4ACD009CBBDA /* video2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = B3FE75611E5B4ACD009CBBDA /* video2.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,7 +83,6 @@
 		B3FE75301E5AB34C009CBBDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B3FE753C1E5AB3A0009CBBDA /* TowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TowViewController.h; sourceTree = "<group>"; };
 		B3FE753D1E5AB3A0009CBBDA /* TowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TowViewController.m; sourceTree = "<group>"; };
-		B3FE75401E5B34D0009CBBDA /* video.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = video.mov; sourceTree = "<group>"; };
 		B3FE75441E5B34F6009CBBDA /* audio.Mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = audio.Mp3; sourceTree = "<group>"; };
 		B3FE75461E5B3547009CBBDA /* wallpaper.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wallpaper.png; sourceTree = "<group>"; };
 		B3FE754C1E5B3762009CBBDA /* YTContent.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = YTContent.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -93,6 +92,7 @@
 		B3FE75541E5B3762009CBBDA /* NotificationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationViewController.m; sourceTree = "<group>"; };
 		B3FE75571E5B3762009CBBDA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		B3FE75591E5B3762009CBBDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B3FE75611E5B4ACD009CBBDA /* video2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = video2.mp4; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,8 +156,8 @@
 			isa = PBXGroup;
 			children = (
 				B3FE75461E5B3547009CBBDA /* wallpaper.png */,
-				B3FE75401E5B34D0009CBBDA /* video.mov */,
 				B3FE75441E5B34F6009CBBDA /* audio.Mp3 */,
+				B3FE75611E5B4ACD009CBBDA /* video2.mp4 */,
 				B3FE750C1E5AB34C009CBBDA /* AppDelegate.h */,
 				B3FE750D1E5AB34C009CBBDA /* AppDelegate.m */,
 				B3FE750F1E5AB34C009CBBDA /* ViewController.h */,
@@ -354,8 +354,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3FE75451E5B34F6009CBBDA /* audio.Mp3 in Resources */,
-				B3FE75421E5B34D0009CBBDA /* video.mov in Resources */,
 				B3FE75191E5AB34C009CBBDA /* LaunchScreen.storyboard in Resources */,
+				B3FE75621E5B4ACD009CBBDA /* video2.mp4 in Resources */,
 				B3FE75161E5AB34C009CBBDA /* Assets.xcassets in Resources */,
 				B3FE75471E5B3547009CBBDA /* wallpaper.png in Resources */,
 				B3FE75141E5AB34C009CBBDA /* Main.storyboard in Resources */,

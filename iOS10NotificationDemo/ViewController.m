@@ -43,9 +43,23 @@
 
 - (IBAction)soundClick:(id)sender {
     
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"audio" ofType:@"Mp3"];
+    UNNotificationAttachment *attachment = [UNNotificationAttachment attachmentWithIdentifier:@"audioAttachment" URL:[NSURL fileURLWithPath:path] options:nil error:nil];
+    if(attachment){
+        self.notificationContent.attachments = @[attachment];
+    }
+    
+    [self createLocalNotificationWithContent:_notificationContent];
+    
 }
 - (IBAction)videoClick:(id)sender {
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"video2" ofType:@"mp4"];
+    UNNotificationAttachment *attachment = [UNNotificationAttachment attachmentWithIdentifier:@"videoAttachment" URL:[NSURL fileURLWithPath:path] options:nil error:nil];
+    if(attachment){
+        self.notificationContent.attachments = @[attachment];
+    }
     
+    [self createLocalNotificationWithContent:_notificationContent];
 }
 
 
