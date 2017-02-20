@@ -62,6 +62,18 @@
     [self createLocalNotificationWithContent:_notificationContent];
 }
 
+- (IBAction)actionClick:(id)sender {
+    UNNotificationAction *action1 = [UNNotificationAction actionWithIdentifier:@"OK" title:@"确定" options:UNNotificationActionOptionForeground];
+    
+    UNNotificationAction *action2 = [UNNotificationAction actionWithIdentifier:@"Cancel" title:@"取消" options:UNNotificationActionOptionDestructive];
+    UNNotificationCategory *categroy = [UNNotificationCategory categoryWithIdentifier:@"categroy" actions:@[action1,action2] intentIdentifiers:@[] options:UNNotificationCategoryOptionAllowInCarPlay];
+    [[UNUserNotificationCenter currentNotificationCenter] setNotificationCategories:[NSSet setWithObject:categroy]];
+    [[UNUserNotificationCenter currentNotificationCenter] setDelegate:self];
+    self.notificationContent.categoryIdentifier = @"categroy";
+    
+    [self createLocalNotificationWithContent:_notificationContent];
+}
+
 
 - (void)createLocalNotificationWithContent:(UNMutableNotificationContent *)content{
 
@@ -72,7 +84,7 @@
     UNNotificationSound *sound = [UNNotificationSound defaultSound];
     content.sound = sound;
     
-    UNTimeIntervalNotificationTrigger *trigger1 = [UNTimeIntervalNotificationTrigger triggerWithTimeInterval:2.0 repeats:NO];
+    UNTimeIntervalNotificationTrigger *trigger1 = [UNTimeIntervalNotificationTrigger triggerWithTimeInterval:3.0 repeats:NO];
     NSString *requertID = @"requestID";
     UNNotificationRequest *request = [UNNotificationRequest requestWithIdentifier:requertID content:content trigger:trigger1];
     [[UNUserNotificationCenter currentNotificationCenter] addNotificationRequest:request withCompletionHandler:^(NSError * _Nullable error) {
@@ -93,7 +105,18 @@
 
 - (void)userNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void (^)())completionHandler {
 
-
+     NSString *categoryIdentifier = response.notification.request.content.categoryIdentifier;
+    if ([categoryIdentifier isEqualToString:@"categroy"]) {
+        if ([response.actionIdentifier isEqualToString:@"OK"]){
+            NSLog(@"确定");
+        }
+        if ([response.actionIdentifier isEqualToString:@"Cancel"]){
+            NSLog(@"取消");
+        }
+        
+    }
+    
+    
      completionHandler();
 }
 
