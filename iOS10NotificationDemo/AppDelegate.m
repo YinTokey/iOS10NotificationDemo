@@ -17,33 +17,39 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+
+    [self registerNotification:application];
+    
+ 
+    
+    
+    return YES;
+}
+
+- (void)registerNotification:(UIApplication *)application{
     // register notification
     if ([[UIDevice currentDevice].systemVersion floatValue] >= 10.0) {
-    // iOS 10
+        // iOS 10
         UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
         center.delegate = self;
         [center requestAuthorizationWithOptions:(UNAuthorizationOptionAlert | UNAuthorizationOptionBadge | UNAuthorizationOptionSound) completionHandler:^(BOOL granted, NSError * _Nullable error) {
             if (granted) {
                 // click allow
-                NSLog(@"registered successful");
+                NSLog(@"注册通知成功");
                 [center getNotificationSettingsWithCompletionHandler:^(UNNotificationSettings * _Nonnull settings) {
                     //NSLog(@"%@", settings);
                 }];
             } else {
                 // don't allow
-                NSLog(@"registered failed");
+                NSLog(@"注册通知失败");
             }
         }];
     }else{
-    //  //iOS8 - iOS10
+        //  //iOS8 - iOS10
         [application registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert | UIUserNotificationTypeSound | UIUserNotificationTypeBadge categories:nil]];
     }
-    
-    
-    
-    
-    return YES;
 }
+
 
 
 - (void)applicationWillResignActive:(UIApplication *)application {
