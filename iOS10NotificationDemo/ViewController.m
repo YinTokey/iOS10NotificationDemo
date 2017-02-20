@@ -25,5 +25,12 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)imageClick:(id)sender {
+}
+
+- (IBAction)soundClick:(id)sender {
+}
+- (IBAction)videoClick:(id)sender {
+}
 
 @end

@@ -15,6 +15,7 @@
 		B3FE75191E5AB34C009CBBDA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3FE75171E5AB34C009CBBDA /* LaunchScreen.storyboard */; };
 		B3FE75241E5AB34C009CBBDA /* iOS10NotificationDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B3FE75231E5AB34C009CBBDA /* iOS10NotificationDemoTests.m */; };
 		B3FE752F1E5AB34C009CBBDA /* iOS10NotificationDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B3FE752E1E5AB34C009CBBDA /* iOS10NotificationDemoUITests.m */; };
+		B3FE753E1E5AB3A0009CBBDA /* TowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3FE753D1E5AB3A0009CBBDA /* TowViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		B3FE752A1E5AB34C009CBBDA /* iOS10NotificationDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOS10NotificationDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3FE752E1E5AB34C009CBBDA /* iOS10NotificationDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOS10NotificationDemoUITests.m; sourceTree = "<group>"; };
 		B3FE75301E5AB34C009CBBDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B3FE753C1E5AB3A0009CBBDA /* TowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TowViewController.h; sourceTree = "<group>"; };
+		B3FE753D1E5AB3A0009CBBDA /* TowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TowViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +108,8 @@
 				B3FE750D1E5AB34C009CBBDA /* AppDelegate.m */,
 				B3FE750F1E5AB34C009CBBDA /* ViewController.h */,
 				B3FE75101E5AB34C009CBBDA /* ViewController.m */,
+				B3FE753C1E5AB3A0009CBBDA /* TowViewController.h */,
+				B3FE753D1E5AB3A0009CBBDA /* TowViewController.m */,
 				B3FE75121E5AB34C009CBBDA /* Main.storyboard */,
 				B3FE75151E5AB34C009CBBDA /* Assets.xcassets */,
 				B3FE75171E5AB34C009CBBDA /* LaunchScreen.storyboard */,
@@ -279,6 +284,7 @@
 				B3FE75111E5AB34C009CBBDA /* ViewController.m in Sources */,
 				B3FE750E1E5AB34C009CBBDA /* AppDelegate.m in Sources */,
 				B3FE750B1E5AB34C009CBBDA /* main.m in Sources */,
+				B3FE753E1E5AB3A0009CBBDA /* TowViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
