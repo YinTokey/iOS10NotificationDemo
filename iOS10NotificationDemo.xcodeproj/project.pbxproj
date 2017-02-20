@@ -16,6 +16,14 @@
 		B3FE75241E5AB34C009CBBDA /* iOS10NotificationDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B3FE75231E5AB34C009CBBDA /* iOS10NotificationDemoTests.m */; };
 		B3FE752F1E5AB34C009CBBDA /* iOS10NotificationDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B3FE752E1E5AB34C009CBBDA /* iOS10NotificationDemoUITests.m */; };
 		B3FE753E1E5AB3A0009CBBDA /* TowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3FE753D1E5AB3A0009CBBDA /* TowViewController.m */; };
+		B3FE75421E5B34D0009CBBDA /* video.mov in Resources */ = {isa = PBXBuildFile; fileRef = B3FE75401E5B34D0009CBBDA /* video.mov */; };
+		B3FE75451E5B34F6009CBBDA /* audio.Mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B3FE75441E5B34F6009CBBDA /* audio.Mp3 */; };
+		B3FE75471E5B3547009CBBDA /* wallpapaer.png in Resources */ = {isa = PBXBuildFile; fileRef = B3FE75461E5B3547009CBBDA /* wallpapaer.png */; };
+		B3FE754F1E5B3762009CBBDA /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3FE754E1E5B3762009CBBDA /* UserNotifications.framework */; };
+		B3FE75511E5B3762009CBBDA /* UserNotificationsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3FE75501E5B3762009CBBDA /* UserNotificationsUI.framework */; };
+		B3FE75551E5B3762009CBBDA /* NotificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3FE75541E5B3762009CBBDA /* NotificationViewController.m */; };
+		B3FE75581E5B3762009CBBDA /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3FE75561E5B3762009CBBDA /* MainInterface.storyboard */; };
+		B3FE755C1E5B3762009CBBDA /* YTContent.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B3FE754C1E5B3762009CBBDA /* YTContent.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,7 +41,28 @@
 			remoteGlobalIDString = B3FE75051E5AB34C009CBBDA;
 			remoteInfo = iOS10NotificationDemo;
 		};
+		B3FE755A1E5B3762009CBBDA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B3FE74FE1E5AB34C009CBBDA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B3FE754B1E5B3762009CBBDA;
+			remoteInfo = YTContent;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B3FE75601E5B3762009CBBDA /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				B3FE755C1E5B3762009CBBDA /* YTContent.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		B3FE75061E5AB34C009CBBDA /* iOS10NotificationDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS10NotificationDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -54,6 +83,16 @@
 		B3FE75301E5AB34C009CBBDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B3FE753C1E5AB3A0009CBBDA /* TowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TowViewController.h; sourceTree = "<group>"; };
 		B3FE753D1E5AB3A0009CBBDA /* TowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TowViewController.m; sourceTree = "<group>"; };
+		B3FE75401E5B34D0009CBBDA /* video.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = video.mov; sourceTree = "<group>"; };
+		B3FE75441E5B34F6009CBBDA /* audio.Mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = audio.Mp3; sourceTree = "<group>"; };
+		B3FE75461E5B3547009CBBDA /* wallpapaer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wallpapaer.png; sourceTree = "<group>"; };
+		B3FE754C1E5B3762009CBBDA /* YTContent.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = YTContent.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3FE754E1E5B3762009CBBDA /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		B3FE75501E5B3762009CBBDA /* UserNotificationsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotificationsUI.framework; path = System/Library/Frameworks/UserNotificationsUI.framework; sourceTree = SDKROOT; };
+		B3FE75531E5B3762009CBBDA /* NotificationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationViewController.h; sourceTree = "<group>"; };
+		B3FE75541E5B3762009CBBDA /* NotificationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationViewController.m; sourceTree = "<group>"; };
+		B3FE75571E5B3762009CBBDA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		B3FE75591E5B3762009CBBDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +117,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B3FE75491E5B3762009CBBDA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3FE75511E5B3762009CBBDA /* UserNotificationsUI.framework in Frameworks */,
+				B3FE754F1E5B3762009CBBDA /* UserNotifications.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -87,6 +135,8 @@
 				B3FE75081E5AB34C009CBBDA /* iOS10NotificationDemo */,
 				B3FE75221E5AB34C009CBBDA /* iOS10NotificationDemoTests */,
 				B3FE752D1E5AB34C009CBBDA /* iOS10NotificationDemoUITests */,
+				B3FE75521E5B3762009CBBDA /* YTContent */,
+				B3FE754D1E5B3762009CBBDA /* Frameworks */,
 				B3FE75071E5AB34C009CBBDA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -97,6 +147,7 @@
 				B3FE75061E5AB34C009CBBDA /* iOS10NotificationDemo.app */,
 				B3FE751F1E5AB34C009CBBDA /* iOS10NotificationDemoTests.xctest */,
 				B3FE752A1E5AB34C009CBBDA /* iOS10NotificationDemoUITests.xctest */,
+				B3FE754C1E5B3762009CBBDA /* YTContent.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -104,6 +155,7 @@
 		B3FE75081E5AB34C009CBBDA /* iOS10NotificationDemo */ = {
 			isa = PBXGroup;
 			children = (
+				B3FE753F1E5B34C4009CBBDA /* source */,
 				B3FE750C1E5AB34C009CBBDA /* AppDelegate.h */,
 				B3FE750D1E5AB34C009CBBDA /* AppDelegate.m */,
 				B3FE750F1E5AB34C009CBBDA /* ViewController.h */,
@@ -145,6 +197,36 @@
 			path = iOS10NotificationDemoUITests;
 			sourceTree = "<group>";
 		};
+		B3FE753F1E5B34C4009CBBDA /* source */ = {
+			isa = PBXGroup;
+			children = (
+				B3FE75461E5B3547009CBBDA /* wallpapaer.png */,
+				B3FE75401E5B34D0009CBBDA /* video.mov */,
+				B3FE75441E5B34F6009CBBDA /* audio.Mp3 */,
+			);
+			name = source;
+			sourceTree = "<group>";
+		};
+		B3FE754D1E5B3762009CBBDA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B3FE754E1E5B3762009CBBDA /* UserNotifications.framework */,
+				B3FE75501E5B3762009CBBDA /* UserNotificationsUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B3FE75521E5B3762009CBBDA /* YTContent */ = {
+			isa = PBXGroup;
+			children = (
+				B3FE75531E5B3762009CBBDA /* NotificationViewController.h */,
+				B3FE75541E5B3762009CBBDA /* NotificationViewController.m */,
+				B3FE75561E5B3762009CBBDA /* MainInterface.storyboard */,
+				B3FE75591E5B3762009CBBDA /* Info.plist */,
+			);
+			path = YTContent;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -155,10 +237,12 @@
 				B3FE75021E5AB34C009CBBDA /* Sources */,
 				B3FE75031E5AB34C009CBBDA /* Frameworks */,
 				B3FE75041E5AB34C009CBBDA /* Resources */,
+				B3FE75601E5B3762009CBBDA /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				B3FE755B1E5B3762009CBBDA /* PBXTargetDependency */,
 			);
 			name = iOS10NotificationDemo;
 			productName = iOS10NotificationDemo;
@@ -201,6 +285,23 @@
 			productReference = B3FE752A1E5AB34C009CBBDA /* iOS10NotificationDemoUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		B3FE754B1E5B3762009CBBDA /* YTContent */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B3FE755D1E5B3762009CBBDA /* Build configuration list for PBXNativeTarget "YTContent" */;
+			buildPhases = (
+				B3FE75481E5B3762009CBBDA /* Sources */,
+				B3FE75491E5B3762009CBBDA /* Frameworks */,
+				B3FE754A1E5B3762009CBBDA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = YTContent;
+			productName = YTContent;
+			productReference = B3FE754C1E5B3762009CBBDA /* YTContent.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -227,6 +328,11 @@
 						ProvisioningStyle = Automatic;
 						TestTargetID = B3FE75051E5AB34C009CBBDA;
 					};
+					B3FE754B1E5B3762009CBBDA = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 6YFDY973XZ;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = B3FE75011E5AB34C009CBBDA /* Build configuration list for PBXProject "iOS10NotificationDemo" */;
@@ -245,6 +351,7 @@
 				B3FE75051E5AB34C009CBBDA /* iOS10NotificationDemo */,
 				B3FE751E1E5AB34C009CBBDA /* iOS10NotificationDemoTests */,
 				B3FE75291E5AB34C009CBBDA /* iOS10NotificationDemoUITests */,
+				B3FE754B1E5B3762009CBBDA /* YTContent */,
 			);
 		};
 /* End PBXProject section */
@@ -254,8 +361,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3FE75451E5B34F6009CBBDA /* audio.Mp3 in Resources */,
+				B3FE75421E5B34D0009CBBDA /* video.mov in Resources */,
 				B3FE75191E5AB34C009CBBDA /* LaunchScreen.storyboard in Resources */,
 				B3FE75161E5AB34C009CBBDA /* Assets.xcassets in Resources */,
+				B3FE75471E5B3547009CBBDA /* wallpapaer.png in Resources */,
 				B3FE75141E5AB34C009CBBDA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -271,6 +381,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B3FE754A1E5B3762009CBBDA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3FE75581E5B3762009CBBDA /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,6 +422,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B3FE75481E5B3762009CBBDA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3FE75551E5B3762009CBBDA /* NotificationViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -316,6 +442,11 @@
 			isa = PBXTargetDependency;
 			target = B3FE75051E5AB34C009CBBDA /* iOS10NotificationDemo */;
 			targetProxy = B3FE752B1E5AB34C009CBBDA /* PBXContainerItemProxy */;
+		};
+		B3FE755B1E5B3762009CBBDA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B3FE754B1E5B3762009CBBDA /* YTContent */;
+			targetProxy = B3FE755A1E5B3762009CBBDA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -334,6 +465,14 @@
 				B3FE75181E5AB34C009CBBDA /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		B3FE75561E5B3762009CBBDA /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B3FE75571E5B3762009CBBDA /* Base */,
+			);
+			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -503,6 +642,30 @@
 			};
 			name = Release;
 		};
+		B3FE755E1E5B3762009CBBDA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 6YFDY973XZ;
+				INFOPLIST_FILE = YTContent/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = YinjianChen.iOS10NotificationDemo.YTContent;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		B3FE755F1E5B3762009CBBDA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 6YFDY973XZ;
+				INFOPLIST_FILE = YTContent/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = YinjianChen.iOS10NotificationDemo.YTContent;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -536,6 +699,14 @@
 			buildConfigurations = (
 				B3FE753A1E5AB34C009CBBDA /* Debug */,
 				B3FE753B1E5AB34C009CBBDA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B3FE755D1E5B3762009CBBDA /* Build configuration list for PBXNativeTarget "YTContent" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B3FE755E1E5B3762009CBBDA /* Debug */,
+				B3FE755F1E5B3762009CBBDA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};

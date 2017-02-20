@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>YTContent.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>iOS10NotificationDemo.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -23,6 +28,11 @@
 			<true/>
 		</dict>
 		<key>B3FE75291E5AB34C009CBBDA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B3FE754B1E5B3762009CBBDA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
