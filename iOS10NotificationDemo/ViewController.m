@@ -84,7 +84,7 @@
     UNNotificationSound *sound = [UNNotificationSound defaultSound];
     content.sound = sound;
     
-    UNTimeIntervalNotificationTrigger *trigger1 = [UNTimeIntervalNotificationTrigger triggerWithTimeInterval:3.0 repeats:NO];
+    UNTimeIntervalNotificationTrigger *trigger1 = [UNTimeIntervalNotificationTrigger triggerWithTimeInterval:1.0 repeats:NO];
     NSString *requertID = @"requestID";
     UNNotificationRequest *request = [UNNotificationRequest requestWithIdentifier:requertID content:content trigger:trigger1];
     [[UNUserNotificationCenter currentNotificationCenter] addNotificationRequest:request withCompletionHandler:^(NSError * _Nullable error) {
