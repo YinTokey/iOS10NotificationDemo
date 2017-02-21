@@ -48,8 +48,50 @@
         //  //iOS8 - iOS10
         [application registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert | UIUserNotificationTypeSound | UIUserNotificationTypeBadge categories:nil]];
     }
+    
+
+}
+#pragma mark - device token
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken{
+
+    NSString *deviceString = [[deviceToken description] stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"<>"]];
+    deviceString = [deviceString stringByReplacingOccurrencesOfString:@" " withString:@""];
+    
+    NSLog(@"deviceToken %@",deviceString);
+
+    
 }
 
+- (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error{
+    NSLog(@"[DeviceToken Error]:%@\n",error.description);
+}
+
+- (void)userNotificationCenter:(UNUserNotificationCenter *)center willPresentNotification:(UNNotification *)notification withCompletionHandler:(void (^)(UNNotificationPresentationOptions))completionHandler{
+
+    UNNotificationRequest *request = notification.request;
+    UNNotificationContent *content = request.content;
+    NSDictionary *userInfo = content.userInfo;
+    NSNumber *badge = content.badge;
+    NSString *body = content.body;
+    UNNotificationSound *sound = content.sound;
+    NSString *subtitle = content.subtitle;
+
+    NSString *title = content.title;
+    
+    if([notification.request.trigger isKindOfClass:[UNPushNotificationTrigger class]]) {
+
+        NSLog(@"iOS10 收到远程通知:%@",userInfo);
+        
+    }else {
+
+        NSLog(@"iOS10 收到本地通知:{\\\\nbody:%@，\\\\ntitle:%@,\\\\nsubtitle:%@,\\\\nbadge：%@，\\\\nsound：%@，\\\\nuserInfo：%@\\\\n}",body,title,subtitle,badge,sound,userInfo);
+    }
+
+    completionHandler(UNNotificationPresentationOptionBadge|
+                      UNNotificationPresentationOptionSound|
+                      UNNotificationPresentationOptionAlert);
+    
+}
 
 
 - (void)applicationWillResignActive:(UIApplication *)application {
@@ -78,5 +120,21 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+//{
+//    "aps":{
+//        "alert" : {
+//            "title" : "title",
+//            "subtitle" : "Subtitle",
+//            "body" : "body"
+//        },
+//        "sound" : "default",
+//        "badge" : "1",
+//        "mutable-content" : "1",
+//        "category" : "category"
+//    },
+//    "image" : "http://pic9.nipic.com/20100906/1295091_134639124058_2.jpg",
+//    "type" : "scene",
+//    "id" : "1000"
+//}
 
 @end
