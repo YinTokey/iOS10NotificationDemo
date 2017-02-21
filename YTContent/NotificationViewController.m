@@ -25,6 +25,7 @@
 }
 
 - (void)didReceiveNotification:(UNNotification *)notification {
+    self.label.text = notification.request.content.body;
     UNNotificationContent * content = notification.request.content;
     UNNotificationAttachment * attachment = content.attachments.firstObject;
     if (attachment.URL.startAccessingSecurityScopedResource) {

@@ -21,52 +21,24 @@
     self.contentHandler = contentHandler;
     self.bestAttemptContent = [request.content mutableCopy];
     
-    NSString * attchUrl = [request.content.userInfo objectForKey:@"image"];
-    //下载图片,放到本地
-    UIImage * imageFromUrl = [self getImageFromURL:attchUrl];
-    
-    //获取documents目录
+    NSString * imageUrlStr = [request.content.userInfo objectForKey:@"image"];
+    //下载图片
+    NSData * data = [NSData dataWithContentsOfURL:[NSURL URLWithString:imageUrlStr]];
+    UIImage * image = [UIImage imageWithData:data];
+    //保存到本地
     NSArray * paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString * documentsDirectoryPath = [paths firstObject];
+    NSString * localPath = [documentsDirectoryPath stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.%@", @"notificationImage", @"png"]];
+    [UIImagePNGRepresentation(image) writeToFile:localPath options:NSAtomicWrite error:nil];
     
-    NSString * localPath = [self saveImage:imageFromUrl withFileName:@"MyImage" ofType:@"png" inDirectory:documentsDirectoryPath];
     if (localPath && ![localPath isEqualToString:@""]) {
-        UNNotificationAttachment * attachment = [UNNotificationAttachment attachmentWithIdentifier:@"photo" URL:[NSURL URLWithString:[@"file://" stringByAppendingString:localPath]] options:nil error:nil];
+        UNNotificationAttachment * attachment = [UNNotificationAttachment attachmentWithIdentifier:@"image" URL:[NSURL fileURLWithPath:localPath] options:nil error:nil];
         if (attachment) {
             self.bestAttemptContent.attachments = @[attachment];
         }
     }
     self.contentHandler(self.bestAttemptContent);
     
-    NSLog(@"收到远程");
-}
-
-- (UIImage *) getImageFromURL:(NSString *)fileURL {
-    NSLog(@"执行图片下载函数");
-    UIImage * result;
-    //dataWithContentsOfURL方法需要https连接
-    NSData * data = [NSData dataWithContentsOfURL:[NSURL URLWithString:fileURL]];
-    result = [UIImage imageWithData:data];
-    
-    return result;
-}
-
-//将所下载的图片保存到本地
-- (NSString *) saveImage:(UIImage *)image withFileName:(NSString *)imageName ofType:(NSString *)extension inDirectory:(NSString *)directoryPath {
-    NSString *urlStr = @"";
-    if ([[extension lowercaseString] isEqualToString:@"png"]){
-        urlStr = [directoryPath stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.%@", imageName, @"png"]];
-        [UIImagePNGRepresentation(image) writeToFile:urlStr options:NSAtomicWrite error:nil];
-        
-    } else if ([[extension lowercaseString] isEqualToString:@"jpg"] ||
-               [[extension lowercaseString] isEqualToString:@"jpeg"]){
-        urlStr = [directoryPath stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.%@", imageName, @"jpg"]];
-        [UIImageJPEGRepresentation(image, 1.0) writeToFile:urlStr options:NSAtomicWrite error:nil];
-        
-    } else{
-        NSLog(@"extension error");
-    }
-    return urlStr;
 }
 
 

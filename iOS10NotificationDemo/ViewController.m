@@ -66,10 +66,10 @@
     UNNotificationAction *action1 = [UNNotificationAction actionWithIdentifier:@"OK" title:@"确定" options:UNNotificationActionOptionForeground];
     
     UNNotificationAction *action2 = [UNNotificationAction actionWithIdentifier:@"Cancel" title:@"取消" options:UNNotificationActionOptionDestructive];
-    UNNotificationCategory *categroy = [UNNotificationCategory categoryWithIdentifier:@"categroy" actions:@[action1,action2] intentIdentifiers:@[] options:UNNotificationCategoryOptionAllowInCarPlay];
-    [[UNUserNotificationCenter currentNotificationCenter] setNotificationCategories:[NSSet setWithObject:categroy]];
+    UNNotificationCategory *category = [UNNotificationCategory categoryWithIdentifier:@"category" actions:@[action1,action2] intentIdentifiers:@[] options:UNNotificationCategoryOptionAllowInCarPlay];
+    [[UNUserNotificationCenter currentNotificationCenter] setNotificationCategories:[NSSet setWithObject:category]];
     [[UNUserNotificationCenter currentNotificationCenter] setDelegate:self];
-    self.notificationContent.categoryIdentifier = @"categroy";
+    self.notificationContent.categoryIdentifier = @"category";
     
     [self createLocalNotificationWithContent:_notificationContent];
 }
