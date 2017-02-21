@@ -106,6 +106,7 @@
 		B3FE756B1E5C790A009CBBDA /* NotificationService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationService.h; sourceTree = "<group>"; };
 		B3FE756C1E5C790A009CBBDA /* NotificationService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationService.m; sourceTree = "<group>"; };
 		B3FE756E1E5C790A009CBBDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B3FE75751E5C8835009CBBDA /* pushService.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = pushService.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -244,6 +245,7 @@
 		B3FE756A1E5C790A009CBBDA /* pushService */ = {
 			isa = PBXGroup;
 			children = (
+				B3FE75751E5C8835009CBBDA /* pushService.entitlements */,
 				B3FE756B1E5C790A009CBBDA /* NotificationService.h */,
 				B3FE756C1E5C790A009CBBDA /* NotificationService.m */,
 				B3FE756E1E5C790A009CBBDA /* Info.plist */,
@@ -358,6 +360,9 @@
 						DevelopmentTeam = 6YFDY973XZ;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
 							com.apple.Push = {
 								enabled = 1;
 							};
@@ -389,6 +394,11 @@
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 6YFDY973XZ;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -750,6 +760,7 @@
 		B3FE75731E5C790A009CBBDA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = pushService/pushService.entitlements;
 				DEVELOPMENT_TEAM = 6YFDY973XZ;
 				INFOPLIST_FILE = pushService/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
@@ -762,6 +773,7 @@
 		B3FE75741E5C790A009CBBDA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = pushService/pushService.entitlements;
 				DEVELOPMENT_TEAM = 6YFDY973XZ;
 				INFOPLIST_FILE = pushService/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
