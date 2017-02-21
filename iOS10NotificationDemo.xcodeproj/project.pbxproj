@@ -90,6 +90,7 @@
 		B3FE75571E5B3762009CBBDA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		B3FE75591E5B3762009CBBDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B3FE75611E5B4ACD009CBBDA /* video2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = video2.mp4; sourceTree = "<group>"; };
+		B3FE75631E5C6CF5009CBBDA /* YTContent.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = YTContent.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,6 +207,7 @@
 		B3FE75521E5B3762009CBBDA /* YTContent */ = {
 			isa = PBXGroup;
 			children = (
+				B3FE75631E5C6CF5009CBBDA /* YTContent.entitlements */,
 				B3FE75531E5B3762009CBBDA /* NotificationViewController.h */,
 				B3FE75541E5B3762009CBBDA /* NotificationViewController.m */,
 				B3FE75561E5B3762009CBBDA /* MainInterface.storyboard */,
@@ -319,6 +321,11 @@
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 6YFDY973XZ;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -561,7 +568,7 @@
 				DEVELOPMENT_TEAM = 6YFDY973XZ;
 				INFOPLIST_FILE = iOS10NotificationDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = YinjianChen.iOS10NotificationDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ios10push.yin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -573,7 +580,7 @@
 				DEVELOPMENT_TEAM = 6YFDY973XZ;
 				INFOPLIST_FILE = iOS10NotificationDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = YinjianChen.iOS10NotificationDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ios10push.yin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -631,10 +638,11 @@
 		B3FE755E1E5B3762009CBBDA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = YTContent/YTContent.entitlements;
 				DEVELOPMENT_TEAM = 6YFDY973XZ;
 				INFOPLIST_FILE = YTContent/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = YinjianChen.iOS10NotificationDemo.YTContent;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ios10push.yin.YTContent;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -643,10 +651,11 @@
 		B3FE755F1E5B3762009CBBDA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = YTContent/YTContent.entitlements;
 				DEVELOPMENT_TEAM = 6YFDY973XZ;
 				INFOPLIST_FILE = YTContent/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = YinjianChen.iOS10NotificationDemo.YTContent;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ios10push.yin.YTContent;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
