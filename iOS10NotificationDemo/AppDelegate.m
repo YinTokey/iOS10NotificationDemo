@@ -49,7 +49,8 @@
         [application registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert | UIUserNotificationTypeSound | UIUserNotificationTypeBadge categories:nil]];
     }
     
-
+    [application registerForRemoteNotifications];
+    
 }
 #pragma mark - device token
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken{
@@ -68,23 +69,14 @@
 
 - (void)userNotificationCenter:(UNUserNotificationCenter *)center willPresentNotification:(UNNotification *)notification withCompletionHandler:(void (^)(UNNotificationPresentationOptions))completionHandler{
 
-    UNNotificationRequest *request = notification.request;
-    UNNotificationContent *content = request.content;
-    NSDictionary *userInfo = content.userInfo;
-    NSNumber *badge = content.badge;
-    NSString *body = content.body;
-    UNNotificationSound *sound = content.sound;
-    NSString *subtitle = content.subtitle;
-
-    NSString *title = content.title;
     
     if([notification.request.trigger isKindOfClass:[UNPushNotificationTrigger class]]) {
 
-        NSLog(@"iOS10 收到远程通知:%@",userInfo);
+        NSLog(@"iOS10 收到远程通知");
         
     }else {
 
-        NSLog(@"iOS10 收到本地通知:{\\\\nbody:%@，\\\\ntitle:%@,\\\\nsubtitle:%@,\\\\nbadge：%@，\\\\nsound：%@，\\\\nuserInfo：%@\\\\n}",body,title,subtitle,badge,sound,userInfo);
+        NSLog(@"iOS10 收到本地通知:");
     }
 
     completionHandler(UNNotificationPresentationOptionBadge|
